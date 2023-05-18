@@ -9,7 +9,7 @@ function ListHeader({listName}) {
 		<h1>{listName}</h1>
 		<div className="button-container">
 			<button className="create">ADD NEW</button>
-			<button className="signout" onCLick={singOut}>SIGN OUT</button>
+			<button className="signout" onClick={singOut}>SIGN OUT</button>
 		</div>
 	  </div>
 	);
