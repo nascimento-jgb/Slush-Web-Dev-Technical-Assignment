@@ -1,6 +1,101 @@
-function Modal() {
+import { useState } from "react";
+
+const Modal = ( {mode, setShowModal, getData, task} ) => {
+	const editMode = mode === 'edit' ? true : false
+
+	const [data, setData] = useState({
+		user_email: editMode ? task.user_email : 'joao@test.com',
+		title: editMode ? task.title : null,
+		progress: editMode ? task.progress : 50,
+		date: editMode ? task.date : new Date()
+	})
+
+	const postData = async (e) => {
+		e.preventDefault()
+		try {
+			const response = await fetch('http://localhost:8000/todos', {
+				method: "POST",
+				headers: {'Content-Type': 'application/json'},
+				body: JSON.stringify(data)
+			})
+			if (response.status === 200)
+			{
+				console.log('WORKED')
+				setShowModal(false)
+				getData()
+			}
+		} catch (err) {
+			console.error(err)
+		}
+
+	}
+
+	const editData = async(e) => {
+		e.preventDefault()
+		try {
+			const response = await fetch(`${process.env.REACT_APP_SERVERURL}/todos/${task.id}`, {
+				method: 'PUT',
+				headers: {'Content-Type': 'application/json'},
+				body: JSON.stringify(data)
+			})
+			if (response.status === 200)
+				{
+					console.log('edition worked')
+					setShowModal(false)
+					getData()
+				}
+		} catch (err) {
+			console.error(err)
+		}
+
+	}
+
+	const handleChange = (e) => {
+		console.log('changing', e)
+		const { name, value } = e.target
+
+		setData(data => ({
+			...data,
+			[name] : value
+		}))
+
+		console.log(data)
+	}
+
 	return (
-	  <div>
+	  <div className="overlay">
+		<div className="modal">
+			<div className="form-title-container">
+				<h3>Time to {mode} a task card!</h3>
+				<button onClick={() => setShowModal(false)}>X</button>
+			</div>
+
+			<form>
+				<input
+					required
+					maxLength = {30}
+					placeholder = "Your task goes here"
+					name = "title"
+					value = {data.title}
+					onChange = {handleChange}
+				/>
+				<br/>
+				<label htmlFor="range">Drag to set your current progress</label>
+				<input
+					required
+					type = "range"
+					id = "range"
+					min = "0"
+					max = "100"
+					step={1}
+					name = "progress"
+					value = {data.progress}
+					onChange = {handleChange}
+				/>
+				<input className={mode} type="submit" onClick={editMode ? editData : postData}/>
+			</form>
+
+		</div>
 	  </div>
 	);
   }

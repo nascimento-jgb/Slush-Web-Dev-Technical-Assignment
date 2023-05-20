@@ -1,14 +1,17 @@
 import ListHeader from "./components/ListHeader";
 import ListItem from "./components/ListItem"
+import Auth from "./components/Auth"
 import { useEffect, useState } from 'react'
 
 function App() {
   const userEmail = 'joao@test.com'
   const [ tasks, setTasks] = useState(null)
 
+  const authToken = false
+
   const getData = async () => {
     try {
-      const response = await fetch(`http://localhost:8000/todos/${ userEmail }`)
+      const response = await fetch(`${process.env.REACT_APP_SERVERURL}/todos/${ userEmail }`)
       const json = await response.json()
       console.log(json)
       setTasks(json)
@@ -17,7 +20,10 @@ function App() {
     }
   }
 
-  useEffect(() => getData, [])
+  useEffect(() =>{
+    if (authToken) {
+      getData()
+    }}, []) // eslint-disable-line react-hooks/exhaustive-deps
 
   console.log(tasks)
 
@@ -26,8 +32,12 @@ function App() {
 
   return (
     <div className="app">
-      <ListHeader listName= {' 💻 Project Cards Follow-Up '}/>
-      {sortedTasks?.map((task) => <ListItem key = {task.id} task={task}/>)}
+      {!authToken && <Auth/>}
+      {authToken &&
+      <>
+      <ListHeader listName= {' 💻 Project Cards Follow-Up '} getData={getData}/>
+      {sortedTasks?.map((task) => <ListItem key = {task.id} task={task} getData={getData}/>)}
+      </>}
     </div>
   );
 }
