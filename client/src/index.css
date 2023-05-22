@@ -13,8 +13,53 @@ body {
   box-shadow: rgba(0,0,0, 0.05) 0 6px 24px, rgba(0,0,0, 0.08) 0 0 0 1px;
   border-radius: 10px;
   padding: 10px;
-  width: 800px;
+  width: 900px;
   margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.columns-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  min-width: 800px;
+}
+
+.column {
+  flex-basis: 30%;
+  min-height: 100px;
+  margin: 0 10px;
+}
+
+.column h2 {
+  margin-bottom: 10px;
+}
+
+.column ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.column:nth-child(1) {
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0.05) 0 6px 24px, rgba(0, 0, 0, 0.08) 0 0 0 1px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.column:nth-child(2) {
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0.05) 0 6px 24px, rgba(0, 0, 0, 0.08) 0 0 0 1px;
+  border-radius: 10px;
+  padding: 10px;
+}
+.column:nth-child(3) {
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0.05) 0 6px 24px, rgba(0, 0, 0, 0.08) 0 0 0 1px;
+  border-radius: 10px;
+  padding: 10px;
 }
 
 .button-container, .info-container {
@@ -118,9 +163,37 @@ input {
   width: 100%;
   margin: 10px 0;
   border-radius: 10px;
-  box-shadow: rgba(0,0,0, 0.08) 0 0 0 1px;
+  box-shadow: rgba(0, 0, 0, 0.08) 0 0 0 1px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+}
+
+.info-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.button-container button {
+  margin: 0 5px;
+  padding: 5px 10px;
+  font-size: 10px;
+  font-weight: bold;
+  border-radius: 12px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.task-title {
+  width: 300px;
+  text-align: center;
 }
 
 .tick {
@@ -218,9 +291,16 @@ input {
   color: rgb(114, 114, 144);
 }
 
+.progress-bar-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
 .outer-bar {
   width: 200px;
-  height: 14;
+  height: 14px;
   background-color: rgb(216, 216, 216);
   border-radius: 7px;
   overflow: hidden;
@@ -232,4 +312,11 @@ input {
 
 .task-title{
   width: 300px
+}
+
+.percentage {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 5px;
 }

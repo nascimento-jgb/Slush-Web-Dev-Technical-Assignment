@@ -1,40 +1,40 @@
 import { useState } from 'react';
-import TickIcon from './TickIcon'
-import ProgressBar from './ProgressBar'
+import TickIcon from './TickIcon';
+import ProgressBar from './ProgressBar';
 import Modal from './Modal';
 
 const ListItem = ({ task, getData }) => {
-	const [showModal, setShowModal] = useState(false)
+  const [showModal, setShowModal] = useState(false);
 
-	const deleteItem = async() => {
-		try {
-			const response = await fetch(`${process.env.REACT_APP_SERVERURL}/todos/${task.id}`, {
-				method: 'DELETE'
-			})
-			if (response.status === 200) {
-				getData()
-			}
-		} catch (err) {
-			console.error(err)
-		}
-	}
+  const deleteItem = async () => {
+    try {
+      const response = await fetch(`${process.env.REACT_APP_SERVERURL}/todos/${task.id}`, {
+        method: 'DELETE'
+      });
+      if (response.status === 200) {
+        getData();
+      }
+    } catch (err) {
+      console.error(err);
+    }
+  };
 
-	return (
-	  <li className="list-item">
+  return (
+    <div className="list-item">
+      <div className="info-container">
+        {task.type === 'done' && <TickIcon />}
+        <p className="task-title">{task.title}</p>
+        {task.type === 'ongoing' && <br/>}
+        {task.type === 'ongoing' && <ProgressBar progress={task.progress} />}
+        {task.type === 'ongoing' && <br/>}
+        <div className="button-container">
+          <button className="edit" onClick={() => setShowModal(true)}>EDIT</button>
+          <button className="delete" onClick={deleteItem}>DELETE</button>
+        </div>
+      </div>
+      {showModal && <Modal mode={'edit'} setShowModal={setShowModal} getData={getData} task={task} />}
+    </div>
+  );
+};
 
-		<div className="info-container">
-			<TickIcon/>
-			<p className="task-title">{task.title}</p>
-			<ProgressBar progress={task.progress}/>
-		</div>
-
-		<div className="button-container">
-			<button className="edit" onClick={() => setShowModal(true)}>EDIT</button>
-			<button className="delete" onClick={deleteItem}>DELETE</button>
-		</div>
-		{showModal && <Modal mode={'edit'} setShowModal={setShowModal} getData={getData} task={task} />}
-	  </li>
-	);
-  }
-
-  export default ListItem;
+export default ListItem;
