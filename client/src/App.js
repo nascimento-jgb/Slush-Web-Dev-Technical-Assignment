@@ -46,12 +46,12 @@ function App() {
       {!authToken && <Auth/>}
       {authToken && (
         <>
-          <ListHeader listName="💻 Project Cards Follow-Up" getData={getData} />
+          <ListHeader listName="💻 PROJECT FOLLOW-UP CARDS" getData={getData} />
           <p className="user-email">Welcome back {userEmail}!</p>
 
           <div className="columns-container">
             <div className="column">
-              <h2>Tasks To Do</h2>
+              <h2>TODO</h2>
               <ul>
                 {sortedTasksToDo.map((task) => (
                   <ListItem key={task.id} task={task} getData={getData} />
@@ -60,7 +60,7 @@ function App() {
             </div>
 
             <div className="column">
-              <h2>Tasks Ongoing</h2>
+              <h2>ONGOING</h2>
               <ul>
                 {sortedTasksOngoing.map((task) => (
                   <ListItem key={task.id} task={task} getData={getData} />
@@ -69,7 +69,7 @@ function App() {
             </div>
 
             <div className="column">
-              <h2>Tasks Done</h2>
+              <h2>DONE</h2>
               <ul>
                 {sortedTasksDone.map((task) => (
                   <ListItem key={task.id} task={task} getData={getData} />

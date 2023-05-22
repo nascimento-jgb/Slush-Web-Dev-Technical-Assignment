@@ -58,7 +58,8 @@ const Auth = () => {
 					placeholder="confirm password"
 					onChange={(e) => setConfirmPassword(e.target.value)}
 				/>}
-				<input type="submit" className="create" onClick={(e) => handleSubmit(e, isLogIn ? 'login' : 'signup')}/>
+				<input type="submit"
+				className="create" onClick={(e) => handleSubmit(e, isLogIn ? 'login' : 'signup')}/>
 				{error && <p>{error}</p>}
 			</form>
 
