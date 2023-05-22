@@ -228,6 +228,7 @@ input {
 .modal .form-title-container {
   display: flex;
   justify-content: space-between;
+  color: black;
 }
 
 .modal .form-title-container button {
@@ -273,13 +274,6 @@ input {
 .auth-options {
   display: flex;
 }
-
-/* .auth-container-box .create{
-  border: 1.5px solid ;
-  background-color: #035883;
-  color: white;
-  text-transform: uppercase;
-} */
 
 .auth-options button {
   width: 50%;

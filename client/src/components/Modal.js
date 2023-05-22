@@ -78,7 +78,7 @@ const Modal = ({ mode, setShowModal, getData, task }) => {
             onChange={handleChange}
           />
           <br />
-          <label htmlFor="range">Drag to set your current progress</label>
+          <label color='black' htmlFor="range">Drag to set your current progress:</label>
           <input
             required
             type="range"
