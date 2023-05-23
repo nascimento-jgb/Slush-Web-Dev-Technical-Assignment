@@ -113,26 +113,26 @@ app.post('/signup', async (req: express.Request, res: express.Response) => {
 });
 
 // Login
-app.post('/login', async (req, res) => {
-	const { email, password } = req.body
+app.post('/login', async (req: express.Request, res: express.Response) => {
+	const { email, password }: LoginData = req.body;
 
 	try {
-		const users = await pool.query('SELECT * FROM users WHERE email = $1', [email])
+	  const users = await pool.query('SELECT * FROM users WHERE email = $1', [email]);
 
-		if (!users.rows.length) return res.status(401).json({ detail: 'User does not exist' })
+	  if (!users.rows.length) return res.status(401).json({ detail: 'User does not exist' });
 
-		const success = await bcrypt.compare(password, users.rows[0].hashed_password)
-		const token = jwt.sign({ email }, 'secret', { expiresIn: '1hr' })
+	  const success = await bcrypt.compare(password, users.rows[0].hashed_password);
+	  const token = jwt.sign({ email }, 'secret', { expiresIn: '1hr' });
 
-		if (success) {
-			res.json({ email: users.rows[0].email, token })
-		} else {
-			res.status(401).json({ detail: 'Login attempt failed!' })
-		}
+	  if (success) {
+		res.json({ email: users.rows[0].email, token });
+	  } else {
+		res.status(401).json({ detail: 'Login attempt failed!' });
+	  }
 	} catch (err) {
-		console.error(err)
-		res.status(500).json({ error: 'Internal Server Error' })
+	  console.error(err);
+	  res.status(500).json({ error: 'Internal Server Error' });
 	}
-})
+  });
 
 app.listen(PORT, () => console.log(`Server running on PORT ${PORT}`))
