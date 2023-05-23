@@ -3,10 +3,10 @@ import React from 'react';
 const ProgressBar = ({ progress }) => {
 	const getColor = (progress) => {
 		const colors = [
-			'rgb(255, 214, 161)',
-			'rgb(141, 181, 145)',
-			'rgb(255, 175, 163)',
-			'rgb(108, 115, 148)'
+			'rgb(174, 32, 18)',
+			'rgb(187, 62, 3)',
+			'rgb(251, 133, 0)',
+			'rgb(253, 158, 2'
 		];
 
 		const index = Math.floor((progress - 1) / 25);
