@@ -59,19 +59,20 @@ const Auth = () => {
 					onChange={(e) => setConfirmPassword(e.target.value)}
 				/>}
 				<input type="submit"
-				className="create" onClick={(e) => handleSubmit(e, isLogIn ? 'login' : 'signup')}/>
+				className="create" onClick={(e) => handleSubmit(e, isLogIn ? 'login' : 'signup')}
+				style={{backgroundColor: 'rgb(255, 255, 255)', color: ' rgb(255, 183, 3)', font: 'bold' }}/>
 				{error && <p>{error}</p>}
 			</form>
 
 			<div className="auth-options">
 				<button
 					onClick={() => viewLogin(false)}
-					style={{backgroundColor : !isLogIn ? 'rgb(255, 255, 255)' : 'rgb(188, 188, 188)'}}
+					style={{backgroundColor : !isLogIn ? 'rgb(255, 255, 255)' : 'rgb(2, 48, 71)'}}
 				>
 					Sign Up</button>
 				<button
 					onClick={() => viewLogin(true)}
-					style={{backgroundColor : isLogIn ? 'rgb(255, 255, 255)' : 'rgb(188, 188, 188)'}}
+					style={{backgroundColor : isLogIn ? 'rgb(255, 255, 255)' : 'rgb(2, 48, 71)'}}
 				>
 					Log In</button>
 			</div>

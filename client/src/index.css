@@ -279,7 +279,9 @@ input {
   width: 50%;
   border: none;
   padding: 10px;
-  color: rgb(35,38,47);
+  color: #FB8500;
+  font-size: medium;
+  font:bold;
 }
 
 .copyright {
