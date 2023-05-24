@@ -26,7 +26,7 @@ const ListHeader: React.FC<ListHeaderProps> = ({ listName, getData }) => {
 				<button className="create" onClick={() => setShowModal(true)}>ADD NEW</button>
 				<button className="signout" onClick={singOut}>SIGN OUT</button>
 			</div>
-			{showModal && <Modal mode={'create'} setShowModal={setShowModal} getData={getData} task={null}/>}
+			{showModal && <Modal mode={'create'} setShowModal={setShowModal} getData={getData}/>}
 		</div>
 	);
 };

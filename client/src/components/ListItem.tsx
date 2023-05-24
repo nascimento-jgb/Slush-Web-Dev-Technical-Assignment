@@ -7,9 +7,11 @@ import React from 'react';
 interface ListItemProps {
 	task: {
 		id: string;
-		type: string;
+		user_email: string;
 		title: string;
 		progress: number;
+		type: string;
+		date: Date;
 	};
 	getData: () => void;
 }

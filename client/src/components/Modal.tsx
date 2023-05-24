@@ -1,19 +1,34 @@
 import { useState } from 'react';
 import { useCookies } from 'react-cookie';
+import React from 'react';
 
-const Modal = ({ mode, setShowModal, getData, task }) => {
-	const [cookies, setCookie, removeCookie] = useCookies(null);
+interface ModalProps {
+	mode: 'create' | 'edit';
+	setShowModal: (show: boolean) => void;
+	getData: () => void;
+	task?: {
+		id: string;
+		user_email: string;
+		title: string;
+		progress: number;
+		type: string;
+		date: Date;
+	};
+}
+
+const Modal: React.FC<ModalProps> = ({ mode, setShowModal, getData, task }) => {
+	const [cookies, setCookie, removeCookie] = useCookies<string>([]);
 	const editMode = mode === 'edit' ? true : false;
 
 	const [data, setData] = useState({
-		user_email: editMode ? task.user_email : cookies.Email,
-		title: editMode ? task.title : '',
-		progress: editMode ? task.progress : 50,
-		type: editMode ? task.type : '',
-		date: editMode ? task.date : new Date(),
+		user_email: editMode ? task?.user_email : cookies.Email,
+		title: editMode ? task?.title : '',
+		progress: editMode ? task?.progress : 50,
+		type: editMode ? task?.type : '',
+		date: editMode ? task?.date : new Date(),
 	});
 
-	const postData = async (e) => {
+	const postData = async (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
 		try {
 			const response = await fetch(`${process.env.REACT_APP_SERVERURL}/todos`, {
@@ -32,10 +47,10 @@ const Modal = ({ mode, setShowModal, getData, task }) => {
 		}
 	};
 
-	const editData = async (e) => {
+	const editData = async (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
 		try {
-			const response = await fetch(`${process.env.REACT_APP_SERVERURL}/todos/${task.id}`, {
+			const response = await fetch(`${process.env.REACT_APP_SERVERURL}/todos/${task?.id}`, {
 				method: 'PUT',
 				headers: { 'Content-Type': 'application/json' },
 				body: JSON.stringify(data),
@@ -51,7 +66,7 @@ const Modal = ({ mode, setShowModal, getData, task }) => {
 		}
 	};
 
-	const handleChange = (e) => {
+	const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
 		const { name, value } = e.target;
 
 		setData((data) => ({
@@ -68,7 +83,7 @@ const Modal = ({ mode, setShowModal, getData, task }) => {
 					<button onClick={() => setShowModal(false)}>X</button>
 				</div>
 
-				<form>
+				<form onSubmit={editMode ? editData : postData}>
 					<input
 						required
 						maxLength={30}
@@ -78,7 +93,7 @@ const Modal = ({ mode, setShowModal, getData, task }) => {
 						onChange={handleChange}
 					/>
 					<br />
-					<label color='black' htmlFor="range">Drag to set your current progress:</label>
+					<label htmlFor="range">Drag to set your current progress:</label>
 					<input
 						required
 						type="range"
@@ -91,18 +106,13 @@ const Modal = ({ mode, setShowModal, getData, task }) => {
 						onChange={handleChange}
 					/>
 					<label htmlFor="type">Select task type:</label>
-					<select
-						id="type"
-						name="type"
-						value={data.type}
-						onChange={handleChange}
-					>
+					<select id="type" name="type" value={data.type} onChange={handleChange}>
 						<option value="">Select type</option>
 						<option value="todo">To Do</option>
 						<option value="ongoing">Ongoing</option>
 						<option value="done">Done</option>
 					</select>
-					<input className={mode} type="submit" onClick={editMode ? editData : postData} />
+					<input className={mode} type="submit" />
 				</form>
 			</div>
 		</div>
