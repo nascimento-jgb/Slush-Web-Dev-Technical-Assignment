@@ -9,9 +9,9 @@ function App() {
 	const [cookies, setCookie, removeCookie] = useCookies<string>([]);
 	const authToken = cookies.AuthToken;
 	const userEmail = cookies.Email;
-	const [tasksToDo, setTasksToDo] = useState([]);
-	const [tasksOngoing, setTasksOngoing] = useState([]);
-	const [tasksDone, setTasksDone] = useState([]);
+	const [tasksToDo, setTasksToDo] = useState<any>([]);
+	const [tasksOngoing, setTasksOngoing] = useState<any>([]);
+	const [tasksDone, setTasksDone] = useState<any>([]);
 
 	const getData = async () => {
 		try {
@@ -38,9 +38,9 @@ function App() {
 		}
 	}, []); // eslint-disable-line react-hooks/exhaustive-deps
 
-	const sortedTasksToDo = tasksToDo.sort((a, b) => new Date(a['date']).valueOf() - new Date(b['date']).valueOf());
-	const sortedTasksOngoing = tasksOngoing.sort((a, b) => new Date(a['date']).valueOf() - new Date(b['date']).valueOf());
-	const sortedTasksDone = tasksDone.sort((a, b) => new Date(a['date']).valueOf() - new Date(b['date']).valueOf());
+	const sortedTasksToDo = tasksToDo.sort((a, b) => new Date(a.date).valueOf() - new Date(b.date).valueOf());
+	const sortedTasksOngoing = tasksOngoing.sort((a, b) => new Date(a.date).valueOf() - new Date(b.date).valueOf());
+	const sortedTasksDone = tasksDone.sort((a, b) => new Date(a.date).valueOf() - new Date(b.date).valueOf());
 
 	return (
 		<div className="app">
