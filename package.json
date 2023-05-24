@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "build": "if-env TYPE=server && (cd server && npm iinstall) || (cd client && npm install)",
-    "server": "node ./server/serve.js",
+    "server": "node ./server/serve.ts",
     "client": "cd client && npm start"
   },
   "keywords": [],
@@ -15,8 +15,11 @@
     "typescript": "^5.0.4"
   },
   "devDependencies": {
+    "@types/bcrypt": "^5.0.0",
+    "@types/jsonwebtoken": "^9.0.2",
     "@types/pg": "^8.10.1",
     "@types/react": "^18.2.6",
-    "@types/react-dom": "^18.2.4"
+    "@types/react-dom": "^18.2.4",
+    "@types/uuid": "^9.0.1"
   }
 }

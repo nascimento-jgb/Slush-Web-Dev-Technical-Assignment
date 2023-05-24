@@ -17,7 +17,7 @@ interface ModalProps {
 }
 
 const Modal: React.FC<ModalProps> = ({ mode, setShowModal, getData, task }) => {
-	const [cookies, setCookie, removeCookie] = useCookies<string>([]);
+	const [cookies, setCookie, removeCookie] = useCookies<string>([]); // eslint-disable-next-line
 	const editMode = mode === 'edit' ? true : false;
 
 	const [data, setData] = useState({

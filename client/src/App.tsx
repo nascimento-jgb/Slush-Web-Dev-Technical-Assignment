@@ -4,9 +4,8 @@ import ListItem from "./components/ListItem";
 import Auth from "./components/Auth";
 import { useCookies } from 'react-cookie';
 
-
-function App() {
-	const [cookies, setCookie, removeCookie] = useCookies<string>([]);
+const App: React.FC = () => {
+	const [cookies, setCookie, removeCookie] = useCookies<string>([]); // eslint-disable-line react-hooks/exhaustive-deps
 	const authToken = cookies.AuthToken;
 	const userEmail = cookies.Email;
 	const [tasksToDo, setTasksToDo] = useState<any>([]);
@@ -38,7 +37,7 @@ function App() {
 		}
 	}, []); // eslint-disable-line react-hooks/exhaustive-deps
 
-	const sortedTasksToDo = tasksToDo.sort((a, b) => new Date(a.date).valueOf() - new Date(b.date).valueOf());
+	const sortedTasksToDo = tasksToDo.sort((a, b) => new Date((a as {date: string}).date).valueOf() - new Date(b.date).valueOf());
 	const sortedTasksOngoing = tasksOngoing.sort((a, b) => new Date(a.date).valueOf() - new Date(b.date).valueOf());
 	const sortedTasksDone = tasksDone.sort((a, b) => new Date(a.date).valueOf() - new Date(b.date).valueOf());
 

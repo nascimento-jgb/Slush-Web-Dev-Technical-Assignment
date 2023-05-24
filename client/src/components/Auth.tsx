@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { useCookies } from 'react-cookie';
 import React from 'react';
-import { MouseEvent } from 'react';
 
 interface AuthInfo {
 	email: string;
@@ -10,7 +9,7 @@ interface AuthInfo {
 }
 
 const Auth = () => {
-	const [cookies, setCookie, removeCookie] = useCookies<string>([]);
+	const [cookies, setCookie, removeCookie] = useCookies<string>([]); // eslint-disable-next-line
 	const [isLogIn, setIsLogin] = useState<boolean>(true);
 	const [email, setEmail] = useState<string | null>(null);
 	const [password, setPassword] = useState<string | null>(null);

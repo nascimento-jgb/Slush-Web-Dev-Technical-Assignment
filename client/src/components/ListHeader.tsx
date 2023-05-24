@@ -9,7 +9,7 @@ interface ListHeaderProps {
 }
 
 const ListHeader: React.FC<ListHeaderProps> = ({ listName, getData }) => {
-	const [cookies, setCookie, removeCookie] = useCookies<string>([]);
+	const [cookies, setCookie, removeCookie] = useCookies<string>([]); // eslint-disable-next-line
 	const [showModal, setShowModal] = useState(false);
 
 	const singOut = () => {
