@@ -3,12 +3,13 @@
 	  "target": "es5",
 	  "lib": ["dom", "esnext"],
 	  "jsx": "react-jsx",
-	  "module": "commonjs",
+	  "module": "commonJS",
 	  "esModuleInterop": true,
 	  "sourceMap": true,
 	  "strict": true,
-	  "noImplicitAny": false
+	  "noImplicitAny": false,
+	  "moduleResolution": "Node"
 	},
-	"include": ["src/"],
+	"include": ["/**/*.ts"],
 	"exclude": ["node_modules"],
   }
