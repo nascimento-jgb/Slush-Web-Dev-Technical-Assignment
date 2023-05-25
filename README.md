@@ -16,7 +16,7 @@
 - PostgreSQL 15.3.1 (pgAdmin 4)
 - Express 4.18.2
 - React 18.2.6
-- Node 9.6.4
+- Node 20.1.0
 - Typescript 5.0.4
 
   And more details about the dependencies at package.json file.
