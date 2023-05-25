@@ -40,7 +40,7 @@
 
 
 ## Preview!
-<br>
+
 Login and Signup page:
 <img width="938" alt="Screenshot 2023-05-25 at 15 10 04" src="https://github.com/nascimento-jgb/Slush-Web-Dev-Technical-Assignment/assets/97626192/a0e1aef6-340a-4c77-9da4-4ef6c73d7ed5">
 <br></br>
