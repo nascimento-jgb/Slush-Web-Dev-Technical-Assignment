@@ -7,7 +7,7 @@
 - Database setup and manipulation
 - REST API
 - React components and hooks
-- Autentication
+- Authentication
 - Typescript basics
 - UI/UX simple concepts
 
