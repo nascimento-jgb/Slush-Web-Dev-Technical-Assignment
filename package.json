@@ -5,7 +5,8 @@
   "scripts": {
     "build": "(cd server && npm install) && (cd client && npm install)",
     "server": "nodemon ./server/server.ts",
-    "client": "cd client && npm start"
+    "client": "cd client && npm start",
+    "start": "(nodemon ./server/server.ts) && (cd ../client && npm start)"
   },
   "keywords": [],
   "author": "",
