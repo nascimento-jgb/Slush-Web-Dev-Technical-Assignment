@@ -34,9 +34,12 @@
   Last step, go inside of the client directory and run `npm run start`. 
   Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Planning Process
+## Visual Structure
+![image](https://github.com/nascimento-jgb/Slush-Web-Dev-Technical-Assignment/assets/97626192/cad85c4b-2a08-4232-ad99-c22b8287ce62)
 
-## Preview
+
+
+## Preview!
 <br>
 Login and Signup page:
 <img width="938" alt="Screenshot 2023-05-25 at 15 10 04" src="https://github.com/nascimento-jgb/Slush-Web-Dev-Technical-Assignment/assets/97626192/a0e1aef6-340a-4c77-9da4-4ef6c73d7ed5">
