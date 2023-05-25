@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "build": "(cd server && npm install) && (cd client && npm install)",
-    "start": "(cd ./server && npm start) && (cd ../client && npm start)",
+    "start": "(cd server && npm start) && (cd client && npm start)",
     "server": "nodemon ./server/server.ts",
     "client": "cd client && npm start"
   },
