@@ -37,6 +37,19 @@
 
 ## Preview
 Login and Signup page:
+
 <img width="938" alt="Screenshot 2023-05-25 at 15 10 04" src="https://github.com/nascimento-jgb/Slush-Web-Dev-Technical-Assignment/assets/97626192/a0e1aef6-340a-4c77-9da4-4ef6c73d7ed5">
+
+Initial page to insert cards:
+
+<img width="941" alt="Screenshot 2023-05-25 at 15 10 35" src="https://github.com/nascimento-jgb/Slush-Web-Dev-Technical-Assignment/assets/97626192/b6653ce2-aba5-4e0e-a64d-654a21839202">
+
+Modal to insert/edit new cards:
+
+<img width="957" alt="Screenshot 2023-05-25 at 15 10 52" src="https://github.com/nascimento-jgb/Slush-Web-Dev-Technical-Assignment/assets/97626192/ef3a37f7-f02a-474f-8828-f5ea9af4275a">
+
+Page with multiple cards:
+
+<img width="1005" alt="Screenshot 2023-05-25 at 15 11 32" src="https://github.com/nascimento-jgb/Slush-Web-Dev-Technical-Assignment/assets/97626192/38f90096-6f3d-4b80-b6d6-7777164c98ae">
 
 
