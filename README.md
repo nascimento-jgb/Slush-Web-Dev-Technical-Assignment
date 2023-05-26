@@ -29,6 +29,7 @@ The overall idea was to adapt a Todo app to be as closer as possible of Trello f
   <br></br>
   The page will be available at [http://localhost:3000](http://localhost:3000) in your browser to check the result.
   <br></br>
+  ps: .env files were left inside of the respective directories due to failure of complete deployment, therefore, is possible to test localy by emulating the database in PostgreSQL.
 
 ## Visual Structure
 ![TODO-APP](https://github.com/nascimento-jgb/Slush-Web-Dev-Technical-Assignment/assets/97626192/83f2e339-d7f9-4af3-a924-2bbf60f80262)
