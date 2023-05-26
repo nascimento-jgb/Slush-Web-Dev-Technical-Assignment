@@ -25,7 +25,7 @@ The overall idea was to adapt a Todo app to be as closer as possible of Trello f
   
   Type `npm run build` inside of the main directory after cloning. (It will install all dependencies and node modules)
   <br></br>
-  Then run still in the main directory `npm run server` and after that open a new tab in the terminal and run `npm run client`.
+  Then run still in the server directory `npm run start` and after that open a new tab in the terminal and run `npm run start` in the client one.
   <br></br>
   The page will be available at [http://localhost:3000](http://localhost:3000) in your browser to check the result.
   <br></br>
