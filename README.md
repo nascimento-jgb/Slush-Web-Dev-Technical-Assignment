@@ -37,21 +37,19 @@
 ## Visual Structure
 ![TODO-APP](https://github.com/nascimento-jgb/Slush-Web-Dev-Technical-Assignment/assets/97626192/83f2e339-d7f9-4af3-a924-2bbf60f80262)
 
-
-
-
 ## Preview!
 
 Login and Signup page:
-<img width="938" alt="Screenshot 2023-05-25 at 15 10 04" src="https://github.com/nascimento-jgb/Slush-Web-Dev-Technical-Assignment/assets/97626192/a0e1aef6-340a-4c77-9da4-4ef6c73d7ed5">
+
+<img width="953" alt="Screenshot 2023-05-25 at 15 10 16" src="https://github.com/nascimento-jgb/Slush-Web-Dev-Technical-Assignment/assets/97626192/eb2300b0-ce21-47a6-a122-4cdf0e6155c9">
 <br></br>
 Initial page to insert cards:
-<img width="941" alt="Screenshot 2023-05-25 at 15 10 35" src="https://github.com/nascimento-jgb/Slush-Web-Dev-Technical-Assignment/assets/97626192/b6653ce2-aba5-4e0e-a64d-654a21839202">
+<img width="941" alt="Screenshot 2023-05-25 at 15 10 35" src="https://github.com/nascimento-jgb/Slush-Web-Dev-Technical-Assignment/assets/97626192/5382516c-ae48-438b-926a-5249cee208e1">
 <br></br>
 Modal to insert/edit new cards:
-<img width="957" alt="Screenshot 2023-05-25 at 15 10 52" src="https://github.com/nascimento-jgb/Slush-Web-Dev-Technical-Assignment/assets/97626192/ef3a37f7-f02a-474f-8828-f5ea9af4275a">
+<img width="957" alt="Screenshot 2023-05-25 at 15 10 52" src="https://github.com/nascimento-jgb/Slush-Web-Dev-Technical-Assignment/assets/97626192/51bdb8ac-5b9c-4589-b85a-54e926cfaed6">
 <br></br>
 Page with multiple cards:
-<img width="1005" alt="Screenshot 2023-05-25 at 15 11 32" src="https://github.com/nascimento-jgb/Slush-Web-Dev-Technical-Assignment/assets/97626192/38f90096-6f3d-4b80-b6d6-7777164c98ae">
+<img width="1005" alt="Screenshot 2023-05-25 at 15 11 32" src="https://github.com/nascimento-jgb/Slush-Web-Dev-Technical-Assignment/assets/97626192/a31d3325-d119-47ea-9837-4df06a39e63b">
 <br></br>
 
