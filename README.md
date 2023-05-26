@@ -35,7 +35,8 @@
   Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## Visual Structure
-![image](https://github.com/nascimento-jgb/Slush-Web-Dev-Technical-Assignment/assets/97626192/cad85c4b-2a08-4232-ad99-c22b8287ce62)
+![TODO-APP](https://github.com/nascimento-jgb/Slush-Web-Dev-Technical-Assignment/assets/97626192/83f2e339-d7f9-4af3-a924-2bbf60f80262)
+
 
 
 
