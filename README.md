@@ -42,7 +42,7 @@ Login and Signup page:
 Initial page to insert cards:
 <img width="941" alt="Screenshot 2023-05-25 at 15 10 35" src="https://github.com/nascimento-jgb/Slush-Web-Dev-Technical-Assignment/assets/97626192/5382516c-ae48-438b-926a-5249cee208e1">
 <br></br>
-Modal to insert/edit new cards:
+Modal to insert/edit new cards with a progress bar (range between 1 - 99%):
 <img width="957" alt="Screenshot 2023-05-25 at 15 10 52" src="https://github.com/nascimento-jgb/Slush-Web-Dev-Technical-Assignment/assets/97626192/51bdb8ac-5b9c-4589-b85a-54e926cfaed6">
 <br></br>
 Page with multiple cards:
