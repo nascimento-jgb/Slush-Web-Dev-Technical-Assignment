@@ -1,6 +1,6 @@
 # Slush-Web-Dev-Technical-Assignment
-  Created a small app using PERN stack (Postgres, Express, React and Node) within a timelimit of 12 hours of development.
-  The overall idea was to adapt a Todo app to be as closer as possible of Trello functionality.
+Created a small app using PERN stack (Postgres, Express, React and Node) within a timelimit of 12 hours of development.
+The overall idea was to adapt a Todo app to be as closer as possible of Trello functionality.
 
 ## Key Learnings:
 
@@ -19,20 +19,16 @@
 - Node 20.1.0
 - Typescript 5.0.4
 
-  And more details about the dependencies at package.json file.
+(More details about the dependencies at package.json file.)
 
 ## How to use?
   
-   Run `npm install` inside of the repository after cloning.
-
-### Server
-  
-  Then go inside of the server directory and run `npm run start` 
-
-### Client
-  
-  Last step, go inside of the client directory and run `npm run start`. 
-  Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+  Type `npm run build` inside of the main directory after cloning. (It will install all dependencies and node modules)
+  <br></br>
+  Then run still in the main directory `npm run server` and after that open a new tab in the terminal and run `npm run client`.
+  <br></br>
+  The page will be available at [http://localhost:3000](http://localhost:3000) in your browser to check the result.
+  <br></br>
 
 ## Visual Structure
 ![TODO-APP](https://github.com/nascimento-jgb/Slush-Web-Dev-Technical-Assignment/assets/97626192/83f2e339-d7f9-4af3-a924-2bbf60f80262)
