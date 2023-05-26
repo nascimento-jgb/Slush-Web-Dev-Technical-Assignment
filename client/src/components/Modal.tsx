@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useCookies } from 'react-cookie';
 import React from 'react';
+import dotenv from 'dotenv'
 
 interface ModalProps {
 	mode: 'create' | 'edit';
@@ -93,7 +94,7 @@ const Modal: React.FC<ModalProps> = ({ mode, setShowModal, getData, task }) => {
 						onChange={handleChange}
 					/>
 					<br />
-					<label htmlFor="range">Drag to set your current progress:</label>
+					<label htmlFor="range" color='black'>Drag to set your current progress:</label>
 					<input
 						required
 						type="range"
