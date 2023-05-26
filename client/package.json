@@ -39,7 +39,8 @@
     ]
   },
   "devDependencies": {
-    "@svgr/webpack": "^8.0.1"
+    "@svgr/webpack": "^8.0.1",
+    "@types/node": "^20.2.4"
   },
   "overrides": {
     "@svgr/webpack": "$@svgr/webpack",

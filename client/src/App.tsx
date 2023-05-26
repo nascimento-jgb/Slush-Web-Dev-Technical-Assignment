@@ -3,6 +3,7 @@ import ListHeader from "./components/ListHeader";
 import ListItem from "./components/ListItem";
 import Auth from "./components/Auth";
 import { useCookies } from 'react-cookie';
+import dotenv from "dotenv"
 
 const App: React.FC = () => {
 	const [cookies, setCookie, removeCookie] = useCookies<string>([]); // eslint-disable-line react-hooks/exhaustive-deps
